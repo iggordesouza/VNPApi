@@ -18,7 +18,9 @@ module.exports = {
     const user = await User.findOne({ token }).exec()
 
     if (!numberNote || !idUserApprov) {
-      res.json({ error: 'Numero NF e/ou Usuário de aprovação não foram preenchidos' })
+      res.json({
+        error: 'Numero NF e/ou Usuário de aprovação não foram preenchidos'
+      })
       return
     }
 
@@ -63,3 +65,4 @@ module.exports = {
   getItem: async (req, res) => {},
   editAction: async (req, res) => {}
 }
+//teste
