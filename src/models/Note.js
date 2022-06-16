@@ -7,7 +7,7 @@ const modelSchema = new mongoose.Schema({
   numberNote: String,
   images: String,
   dateCreated: Date,
-  sent: Boolean,
+  obs: String,
   received: Boolean,
   dateReceived: String
 })

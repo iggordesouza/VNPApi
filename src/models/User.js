@@ -4,7 +4,8 @@ mongoose.Promise = global.Promise
 const modelSchema = new mongoose.Schema({
   fullName: String,
   user: String,
-  passwordHash: String
+  passwordHash: String,
+  token: String
 })
 
 const modelName = 'User'
