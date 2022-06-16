@@ -257,8 +257,18 @@ module.exports = {
       res.json({ error: 'Nota inexistente' })
       return
     }
+    
+    if (note.received == true) {
+      res.json({ error: 'Nota já aprovada' })
+      return
+    }
 
     const user = await User.findOne({ token }).exec()
+
+    if (user.approver == false) {
+      res.json({ error: 'Usuário não é aprovador' })
+      return
+    }
 
     let updates = {}
 

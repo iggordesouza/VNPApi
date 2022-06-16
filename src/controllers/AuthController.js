@@ -64,7 +64,8 @@ module.exports = {
       fullName: data.fullName,
       user: data.user,
       passwordHash,
-      token
+      token,
+      approver: false
     })
     await newUser.save()
 
